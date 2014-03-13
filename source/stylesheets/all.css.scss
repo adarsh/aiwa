@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+@import "bourbon";
+@import "bitters/bitters";
+@import "neat";
+
+//Smooths appearance of text
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+//Removes browser default margins from body.
+body {
+  margin: 0;
+}
+
+.pull-right {
+  float: right;
+}
+
+/* Centers the element in the viewport, clears its floats, and sets its max-width.
+http://neat.bourbon.io/docs/#outer-container */
+
+section {
+  @include outer-container;
+}
+
+header {
+  background: $dark-gray;
+  color: #fff;
+  height: auto;
+  padding: 1em;
+  margin-bottom: 4em;
+  width: 100%;
+  overflow: hidden;
+
+  .blog-title {
+    @include transition(all, .15s, linear);
+    display: inline-block;
+    float: left;
+    font-size: 2em;
+    font-weight: 300;
+    color: #fff;
+
+    &:hover {
+      color: $light-gray;
+    }
+  }
+
+  ul {
+    list-style: none;
+    text-align: right;
+    display: inline-block;
+    float: right;
+
+    li {
+      display: inline-block;
+      font-size: 1em;
+      width: auto;
+
+      a {
+        border-radius: 9px;
+        border: 1px solid rgba(#fff, .5);
+        color: rgba(#fff, .5);
+        margin: 0;
+        padding: .4em 1em;
+
+        &:hover {
+          background: rgba(#fff, .2);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+.post-wrap {
+  @include clearfix;
+  @include span-columns(12);
+  @include transition(all .2s linear);
+  margin-bottom: 2em;
+  padding: 2em;
+
+  &:hover {
+    background: lighten($blue, 44);
+  }
+}
+
+.posts {
+
+  h5 {
+    border-bottom: 2px solid $light-gray;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: .5em;
+    text-align: right;
+  }
+}
+
+.post-body {
+
+  h2 {
+    margin: 1em 0;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .image {
+    @include span-columns(7);
+    border-radius: 5px;
+
+    img {
+      @include fill-parent;
+    }
+  }
+}
+
+.col-three {
+  @include span-columns(4);
+  @include omega(3n);
+}
+
+footer {
+  background: lighten($light-gray, 10);
+  border-top: 1px solid $light-gray;
+  margin-top: 5em;
+  padding: 1em;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+
+  .col-three {
+    padding: .5em;
+    border-right: 1px solid $light-gray;
+    min-height: 300px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  h4 {
+    font-size: 1.4em;
+    font-weight: 300;
+    padding-bottom: .5em;
+  }
+
+  ol {
+    li {
+      margin: 1em 0;
+    }
+  }
+}
