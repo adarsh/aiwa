@@ -6,71 +6,7 @@
 @import "neat";
 
 // Our Stylesheets
+@import "global";
 @import "header";
 @import "footer";
 @import "static_pages";
-
-//Smooths appearance of text
-html, html a {
-  -webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-}
-
-//Removes browser default margins from body.
-body {
-  margin: 0;
-}
-
-.pull-right {
-  float: right;
-}
-
-/* Centers the element in the viewport, clears its floats, and sets its max-width.
-http://neat.bourbon.io/docs/#outer-container */
-
-section {
-  @include outer-container;
-}
-
-.post-wrap {
-  @include clearfix;
-  @include span-columns(12);
-  @include transition(all .2s linear);
-  margin-bottom: 2em;
-  padding: 2em;
-
-  &:hover {
-    background: lighten($blue, 44);
-  }
-}
-
-.posts {
-
-  h5 {
-    border-bottom: 2px solid $light-gray;
-    font-size: 1em;
-    font-weight: 300;
-    padding-bottom: .5em;
-    text-align: right;
-  }
-}
-
-.post-body {
-
-  h2 {
-    margin: 1em 0;
-  }
-
-  p {
-    margin: 1em 0;
-  }
-
-  .image {
-    @include span-columns(7);
-    border-radius: 5px;
-
-    img {
-      @include fill-parent;
-    }
-  }
-}
