@@ -1,0 +1,32 @@
+.post-wrap {
+  @include clearfix;
+  @include span-columns(12);
+  @include transition(all .2s linear);
+  margin-bottom: 2em;
+  padding: 2em;
+
+  &:hover {
+    background: lighten($blue, 44);
+  }
+
+}
+
+.post-body {
+
+  h2 {
+    margin: 1em 0;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .image {
+    @include span-columns(7);
+    border-radius: 5px;
+
+    img {
+      @include fill-parent;
+    }
+  }
+}

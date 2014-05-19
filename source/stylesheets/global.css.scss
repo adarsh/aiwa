@@ -9,55 +9,25 @@ body {
   margin: 0;
 }
 
-.pull-right {
-  float: right;
-}
-
-// Centers the element in the viewport, clears its floats, and sets its
-// max-width.  http://neat.bourbon.io/docs/#outer-container */
-section {
+section.main-content {
+  // Centers the element in the viewport, clears its floats, and sets its
+  // max-width.  http://neat.bourbon.io/docs/#outer-container */
   @include outer-container;
-}
-
-.post-wrap {
-  @include clearfix;
-  @include span-columns(12);
-  @include transition(all .2s linear);
-  margin-bottom: 2em;
-  padding: 2em;
-
-  &:hover {
-    background: lighten($blue, 44);
-  }
-}
-
-.main-content {
-
-  h5 {
-    border-bottom: 2px solid $light-gray;
-    font-size: 1em;
-    font-weight: 300;
-    padding-bottom: .5em;
-    text-align: right;
-  }
-}
-
-.post-body {
-
-  h2 {
-    margin: 1em 0;
-  }
 
   p {
-    margin: 1em 0;
+    font-size: 1.2em;
+    font-weight: 200;
   }
 
-  .image {
-    @include span-columns(7);
-    border-radius: 5px;
+  h6 {
+    padding: 2em 0 1em 0;
+  }
+}
 
-    img {
-      @include fill-parent;
-    }
+section.homepage {
+  @include span-columns(6);
+
+  h2 {
+    padding-bottom: 1em;
   }
 }
