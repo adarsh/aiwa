@@ -1,0 +1,36 @@
+.col-three {
+  @include span-columns(4);
+  @include omega(3n);
+}
+
+footer {
+  background: lighten($light-gray, 10);
+  border-top: 1px solid $light-gray;
+  margin-top: 5em;
+  padding: 1em;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+
+  .col-three {
+    padding: .5em;
+    border-right: 1px solid $light-gray;
+    min-height: 300px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  h4 {
+    font-size: 1.4em;
+    font-weight: 300;
+    padding-bottom: .5em;
+  }
+
+  ol {
+    li {
+      margin: 1em 0;
+    }
+  }
+}
