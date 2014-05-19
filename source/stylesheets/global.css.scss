@@ -13,9 +13,8 @@ body {
   float: right;
 }
 
-/* Centers the element in the viewport, clears its floats, and sets its max-width.
-http://neat.bourbon.io/docs/#outer-container */
-
+// Centers the element in the viewport, clears its floats, and sets its
+// max-width.  http://neat.bourbon.io/docs/#outer-container */
 section {
   @include outer-container;
 }
