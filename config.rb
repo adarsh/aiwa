@@ -29,7 +29,42 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :git
+  deploy.remote  = 'git@github.com:aiwami/aiwami.github.io.git'
+  deploy.branch  = 'master'
+  # deploy.strategy = :submodule
+end
+
 page "/feed.xml", layout: false
+
+# Reload the browser automatically whenever files change
+activate :livereload
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+# Build-specific configuration
+configure :build do
+  # For example, change the Compass output style for deployment
+  # activate :minify_css
+
+  # Minify Javascript on build
+  # activate :minify_javascript
+
+  # Enable cache buster
+  # activate :asset_hash
+
+  # Use relative URLs
+  activate :relative_assets
+
+  # Or use a different image path
+  # set :http_prefix, "/Content/images/"
+end
 
 ###
 # Compass
@@ -68,36 +103,9 @@ page "/feed.xml", layout: false
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Reload the browser automatically whenever files change
-activate :livereload
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
 #     "Helping"
 #   end
 # end
-
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
-# Build-specific configuration
-configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
-end
