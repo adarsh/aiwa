@@ -11,12 +11,27 @@
   padding: 2em;
 
   &:hover {
-    background: lighten($blue, 44);
+    background: lighten($light-gray, 10);
   }
 
+  .post-title {
+    font-size: 2em;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 1em;
+
+    a {
+      color: black;
+    }
+  }
+
+  .post-date {
+    float: right;
+    font-size: 0.5em;
+  }
 }
 
 .post-body {
+  padding-top: 1em;
 
   h2 {
     margin: 1em 0;
