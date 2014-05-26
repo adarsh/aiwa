@@ -32,7 +32,16 @@ section.main-content {
 section.homepage {
   @include span-columns(6);
 
-  h2 {
-    padding-bottom: 1em;
+  div.segments {
+    padding: 2em 0 2em 0;
+    border-bottom: 1px solid $light-gray;
   }
+
+  h2 {
+    padding-bottom: 0.6em;
+  }
+}
+
+div.paypal-donation-button {
+  padding-top: 2em;
 }
