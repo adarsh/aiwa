@@ -26,3 +26,9 @@ section.about-page {
     padding: 2em 0 1em 0;
   }
 }
+
+section.membership {
+  ol.membership-steps {
+    @extend %default-ol;
+  }
+}
