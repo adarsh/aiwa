@@ -34,7 +34,6 @@ activate :deploy do |deploy|
   deploy.method = :git
   deploy.remote  = 'git@github.com:aiwami/aiwami.github.io.git'
   deploy.branch  = 'master'
-  # deploy.strategy = :submodule
 end
 
 page "/feed.xml", layout: false
