@@ -1,0 +1,93 @@
+section {
+  margin: 3em 0;
+}
+
+.hero {
+  @include clearfix;
+}
+
+.hero-text {
+  @include span-columns(12);
+  padding: 3em 0 3em;
+
+  @include media($medium-screen) {
+    @include span-columns(8);
+  }
+
+  h1 {
+    margin-bottom: $base-padding;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+}
+
+.detail-section {
+  @include clearfix;
+  background: $aiwa-red;
+  color: #EFEFEF;
+  padding: $base-padding * 3;
+
+  h3 {
+    margin-bottom: $base-padding * 1.5;
+  }
+}
+
+.aiwa-attributes {
+  width: auto;
+
+  h4 {
+    padding-bottom: $base-padding;
+  }
+
+  li {
+    @include span-columns(12);
+    padding-bottom: $base-padding;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+    }
+  }
+}
+
+.callout {
+  @include clearfix;
+
+  h2 {
+    padding-bottom: $base-padding;
+  }
+
+  .cta {
+    @include span-columns(12);
+    margin-bottom: 1em;
+
+    @include media($medium-screen) {
+      @include span-columns(8);
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    @include span-columns(12);
+
+    @include media($medium-screen) {
+      @include span-columns(4);
+    }
+
+    h5, byline {
+      font-size: 1.4em;
+      font-weight: 400;
+      padding: 0.3em;
+    }
+
+    byline {
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+}
+
+.donate {
+  padding-bottom: $base-padding;
+}

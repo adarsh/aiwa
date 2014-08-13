@@ -1,8 +1,3 @@
-// Libraries
-@import "bourbon";
-@import "bitters/bitters";
-@import "neat";
-
 .post-wrap {
   @include clearfix;
   @include span-columns(12);

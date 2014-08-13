@@ -1,0 +1,56 @@
+section.main-page {
+  padding: $base-padding;
+
+  h1 {
+    padding-bottom: $base-padding / 2;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    padding-bottom: $base-padding;
+  }
+}
+
+.page-intro {
+  padding-bottom: $base-padding * 3;
+}
+
+.main-content {
+  @include span-columns(12);
+
+  @include media($medium-screen) {
+    @include span-columns(8);
+  }
+}
+
+.author {
+  font-style: italic;
+}
+
+.sidebar {
+  @include span-columns(12);
+  background: lighten($aiwa-tan, 20);
+  padding: $base-padding;
+
+  @include media($medium-screen) {
+    @include span-columns(4);
+  }
+
+  .sidebar-section {
+    padding-bottom: $base-padding;
+  }
+
+  .sidebar-list {
+    li {
+      padding-bottom: $base-padding;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.board {
+  @include span-columns(4);
+}

@@ -1,0 +1,63 @@
+nav {
+  @include fill-parent;
+  background: $navigation-background;
+  height: auto;
+  margin-bottom: 4em;
+  overflow: hidden;
+  padding: 1em 0;
+
+  .outer-container {
+    @include fill-parent;
+    @include clearfix;
+    display: table;
+  }
+
+  .logo {
+    img {
+      max-height: 100px;
+    }
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+    text-align: right;
+
+    li {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+      width: auto;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include media($medium-screen) {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      a {
+        color: #FFFFFF;
+        padding: $base-padding / 2;
+        margin: $base-padding;
+        text-align: center;
+
+        &:hover {
+          @extend .is-active;
+        }
+      }
+    }
+  }
+}
+
+.is-active {
+  border-bottom: 2px solid $aiwa-gold;
+  color: #fff;
+}
+
+.alignment-wrap {
+  display: table-cell;
+  vertical-align: middle;
+}

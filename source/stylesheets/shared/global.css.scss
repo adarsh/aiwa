@@ -1,0 +1,20 @@
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#main {
+  flex: 1;
+}
+
+.outer-container {
+  @include outer-container;
+  padding: 0 $base-padding;
+}

@@ -46,6 +46,7 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
@@ -59,7 +60,13 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
+  # activate :relative_links
   activate :relative_assets
+
+  #set :relative_links, true
+
+  #Use pretty URLs
+  activate :directory_indexes
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
@@ -99,12 +106,23 @@ end
 # Helpers
 ###
 
+## Adds active class to active page
+helpers do
+  def is_page_active(page)
+    current_page.url == page ? "is-active" : ""
+  end
+end
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
 # helpers do
-#   def some_helper
-#     "Helping"
-#   end
+#  def magic_link_to(link, url, opts={})
+#         current_url = current_resource.url
+#         if current_url == url_for(url) || current_url == url_for(url) + "/"
+#             opts[:class] = "active"
+#         end
+#         link_to(link, url, opts)
+#     end
 # end

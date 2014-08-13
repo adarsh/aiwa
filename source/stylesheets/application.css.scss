@@ -6,8 +6,13 @@
 @import "neat";
 
 // Our Stylesheets
-@import "global";
-@import "header";
-@import "footer";
+@import "pages/index";
+@import "pages/main-pages";
+
+@import "shared/footer";
+@import "shared/global";
+@import "shared/posts";
+@import "shared/navigation";
+@import "shared/donation-information";
+
 @import "static_pages";
-@import "posts";

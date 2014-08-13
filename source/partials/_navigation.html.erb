@@ -1,0 +1,17 @@
+<nav>
+  <div class="outer-container">
+    <div class="alignment-wrap">
+      <span class="logo">
+        <%= link_to image_tag("logo.png"), "/" %>
+      </span>
+    </div>
+    <div class="alignment-wrap">
+      <ul>
+        <li><%= link_to "About", "../pages/about.html", :class => is_page_active("/pages/about.html") %></li>
+        <li><%= link_to "Our Board", "../pages/board.html", :class => is_page_active("/pages/board.html") %></li>
+        <li><%= link_to "Events", "../pages/events.html", :class => is_page_active("/pages/events.html") %></li>
+        <li><%= link_to "Membership", "../pages/membership.html", :class => is_page_active("/pages/membership.html") %></li>
+      </ul>
+    </div>
+  </div>
+</nav>

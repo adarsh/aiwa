@@ -1,0 +1,46 @@
+footer.site-footer {
+  background: lighten($light-gray, 10);
+  border-top: 1px solid $light-gray;
+  height: auto;
+  margin-top: 5em;
+  overflow: hidden;
+  padding: $base-padding * 2;
+  width: 100%;
+
+  .footer-main {
+    @include span-columns(12);
+
+    @include media($medium-screen) {
+      @include span-columns(8);
+    }
+
+  }
+  .footer-side {
+    @include span-columns(12);
+    min-height: 250px;
+
+    @include media($medium-screen) {
+      @include span-columns(4);
+    }
+  }
+
+  h5 {
+    font-size: 1.4em;
+    font-weight: 300;
+    padding-bottom: .5em;
+  }
+
+  ol {
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.address {
+  padding-bottom: $base-padding * 2;
+
+  span {
+    display: block;
+  }
+}

@@ -11,12 +11,10 @@
   </head>
 
   <body>
-    <%= partial "partials/header" %>
+    <%= partial "partials/navigation" %>
 
     <div id="main" role="main">
-      <section class="main-content">
-        <%= yield %>
-      </section>
+      <%= yield %>
     </div>
 
     <%= partial "partials/footer" %>

@@ -1,30 +1,25 @@
-<footer>
-  <section>
-    <div class="col-three">
-      <h4>Recent Articles</h4>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
+<footer class="site-footer">
+    <div class="outer-container">
+      <div class="footer-main">
+        <h5>Contact Us</h5>
+        <ul>
+          <li><%= link_to('http://www.aiwami.org') %></li>
+          <li><%= mail_to('aiwamich@gmail.com') %></li>
+        </ul>
+        <div class="address">
+          <span class="name">Asian Indian Women’s Association</span>
+          <span class="street-address">10946 Fellows Hill Dr</span>
+          <span class="locality">Plymouth, MI</span>
+          <span class="postal-code">48170</span>
+        </div>
+      </div>
+      <div class="footer-side">
+        <h5>Recent News</h5>
+        <ol>
+          <% blog.articles[0...10].each do |article| %>
+            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+          <% end %>
+        </ol>
+      </div>
     </div>
-
-    <div class="col-three">
-      <h4>Tags</h4>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-        <% end %>
-      </ol>
-    </div>
-
-    <div class="col-three">
-      <h4>By Year</h4>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        <% end %>
-      </ol>
-    </div>
-  </section>
 </footer>
