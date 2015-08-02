@@ -1,12 +1,12 @@
 .post-wrap {
   @include clearfix;
   @include span-columns(12);
-  @include transition(all .2s linear);
+  @include transition(all .1s ease-in-out);
   margin-bottom: 2em;
   padding: 2em;
 
   &:hover {
-    background: lighten($light-gray, 10);
+    background: lighten($light-gray, 5);
   }
 
   .post-title {
@@ -36,12 +36,22 @@
     margin: 1em 0;
   }
 
+  img {
+    max-width: 60%;
+  }
+
   .image {
     @include span-columns(7);
     border-radius: 5px;
+    max-width: 50%;
 
     img {
       @include fill-parent;
     }
   }
+}
+
+.featured-post-wrap {
+  text-align: center;
+  background: $aiwa-tan;
 }
