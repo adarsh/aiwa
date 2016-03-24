@@ -2,7 +2,6 @@
 title: AIWAMI Fourth Annual Leadership Summit - GPS for Cultural Navigation
 date: 2015-08-02 00:07 UTC
 tags:
-featured: true
 ---
 
 # NOTE: Due to unavoidable circumstances the Leadership Summit has been postponed to April 30th 2016.
